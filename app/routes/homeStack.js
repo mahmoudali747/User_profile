@@ -1,5 +1,6 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
+import { useNavigation } from '@react-navigation/native';
 import 'react-native-gesture-handler';
 import Premierleague from '../Screens/Premierleague/Premierleague'
 import Home  from '../index'
@@ -11,6 +12,6 @@ const screens ={
     screen: Premierleague
 }}
 
-const HomeStack =createStackNavigator(screens);
+const HomeStack = createStackNavigator(screens);
 
 export default createAppContainer(HomeStack);
