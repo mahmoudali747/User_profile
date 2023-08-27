@@ -5,7 +5,7 @@ import 'react-native-gesture-handler';
 export default  function App  (){
   
 
-       const pressHandler = (navigation) => {
+       const pressHandler = ({navigation}) => {
         navigation.navigate('Premierleague');
 
     }
