@@ -1,9 +1,6 @@
 import React,{useState} from "react";
 import { View , Text , Image , TouchableOpacity , Alert , TextInput , StyleSheet , ScrollView } from 'react-native';
-import { createStackNavigator } from "react-navigation-stack";
-import { createAppContainer } from "react-navigation";
 import UserProfile from "./Screens/UserProfile/UserProfile";
-import Navigator from './routes/homeStack'
 import 'react-native-gesture-handler';
 export default  function App  (){
   
@@ -26,7 +23,7 @@ export default  function App  (){
              <Text style={{fontSize:30 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 100 , marginTop : -100 }}>Discover The</Text>
             <Text style={{fontSize:27 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -5 }}>leagues</Text>
              <View style={{marginTop :10}}>
-             <Image source={require('../assets/imges/Frame1.png')} style={{width : 373 , height : 41 , padding : 8 , gab : 8 }}/>
+             <Image source={require('../assets/imges/Frame1.png')} style={{width : 373 , height : 41 , padding : 8  }}/>
                 <TextInput style={styles.input}/>
                 <TouchableOpacity style={{width :2}}>
                 <Image source={require('../assets/imges/searchBtn.png')} style={{width : 83.828 , height : 55.838 , marginHorizontal : 320 , marginVertical : -10 }}/>
