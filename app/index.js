@@ -1,12 +1,15 @@
 import React,{useState} from "react";
 import { View , Text , Image , TouchableOpacity , Alert , TextInput , StyleSheet , ScrollView } from 'react-native';
 import UserProfile from "./Screens/UserProfile/UserProfile";
+import { useNavigation } from "expo-router";
+import Premierleague from "./Screens/Premierleague/Premierleague";
+import { Navigator } from './routes/homeStack';
 import 'react-native-gesture-handler';
-export default  function App  (){
+export default  function App  ({ navigation }){
   
 
-       const pressHandler = ({navigation}) => {
-        navigation.navigate('Premierleague');
+       const pressHandler = () => {
+       navigation.navigate('Premierleague')
 
     }
 
