@@ -12,7 +12,7 @@ export default  function App  ({ navigation }){
        navigation.navigate('Premierleague')
 
     }
-
+const navigation =useNavigation();
     return (
             
          <ScrollView>
