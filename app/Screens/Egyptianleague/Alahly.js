@@ -1,9 +1,11 @@
 import React,{useState} from "react";
+import { useNavigation } from "expo-router";
 import { View , Text , Image , TouchableOpacity , Alert , TextInput , StyleSheet , ScrollView} from 'react-native';
 export default  function Alahly  (){
+    const navigation =useNavigation();
     return (
             <ScrollView>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=> navigation.navigate('UserProfile')}>
             <Image source={require('../../../assets/imges/messi.png')} style={{width : 77 , height : 51 , marginVertical : 24 , marginHorizontal : 315}}/>
         </TouchableOpacity> 
         <TouchableOpacity>

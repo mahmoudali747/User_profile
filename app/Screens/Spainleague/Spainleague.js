@@ -1,9 +1,11 @@
 import React,{useState} from "react";
+import { useNavigation } from "expo-router";
 import { View , Text , Image , TouchableOpacity , Alert , TextInput , StyleSheet , ScrollView} from 'react-native';
 export default  function Spainleague (){
+    const navigation =useNavigation();
     return (
         <View>
-             <TouchableOpacity>
+             <TouchableOpacity onPress={()=> navigation.navigate('UserProfile')}>
              <Image source={require('../../../assets/imges/messi.png')} style={{width : 77 , height : 51 , marginVertical : 20 , marginHorizontal : 315  }}/>
              </TouchableOpacity>
           <TouchableOpacity>
@@ -15,16 +17,16 @@ export default  function Spainleague (){
              <Image source={require('../../../assets/imges/spnainleague.png')} style={{width :76 , height : 76 , marginLeft : 100 , marginTop : -70}}/>
             <Text style={{fontSize:20 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 180 , marginTop : -60 }}>La</Text>
             <Text style={{fontSize:18 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 180 , marginTop : 0 }}>league</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Barcelona')}>
              <Image source={require('../../../assets/imges/Barcelona.png')} style={{width :106 , height : 108 , marginLeft :20 , marginTop : 40}}/>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 130 , marginTop : -100 }}>Barcelona</Text>
              </TouchableOpacity>
-             <TouchableOpacity>
+             <TouchableOpacity onPress={()=> navigation.navigate('RealMadrid')}>
              <Image source={require('../../../assets/imges/Real_Madrid.png')} style={{width :96 , height : 130 , marginLeft :20 , marginTop : 40}}/>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 130 , marginTop : -120 }}>Real</Text>
             <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 130 , marginTop : -20 }}>Madrid</Text>
              </TouchableOpacity>
-             <TouchableOpacity>
+             <TouchableOpacity onPress={()=> navigation.navigate('Atleticomadrid')}>
              <Image source={require('../../../assets/imges/Atletico_Madrid.png')} style={{width :87 , height : 116 , marginLeft :25 , marginTop : 40}}/>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 130 , marginTop : -120 }}>Atletico</Text>
             <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 130 , marginTop : -20 }}>Madrid</Text>

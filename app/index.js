@@ -1,97 +1,66 @@
-import React,{useState} from "react";
-import { View , Text , Image , TouchableOpacity , Alert , TextInput , StyleSheet , ScrollView } from 'react-native';
-import UserProfile from "./Screens/UserProfile/UserProfile";
-import { useNavigation } from "expo-router";
-import Premierleague from "./Screens/Premierleague/Premierleague";
-import { Navigator } from './routes/homeStack';
+import React from "react";
+import {NavigationContainer} from "@react-navigation/native";
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import 'react-native-gesture-handler';
-export default  function App  ({ navigation }){
-  
-
-       const pressHandler = () => {
-       navigation.navigate('Premierleague')
-
-    }
-const navigation =useNavigation();
-    return (
-            
-         <ScrollView>
-            <Image source={require('../assets/imges/News.png')} style={{width : 61 , height : 61 , marginVertical : 25 , marginHorizontal :10 }}/>
-           <TouchableOpacity>
-             <Image source={require('../assets/imges/messi.png')} style={{width : 77 , height : 51 , marginVertical : -95 , marginHorizontal : 315  }}/>
-             </TouchableOpacity>
-          <TouchableOpacity>
-            <Image source={require('../assets/imges/notfication.png')} style={{width : 44 , height : 30 , marginVertical : -84 , marginHorizontal : 280  }}/>
-             </TouchableOpacity>
-             <Text style={{fontSize:30 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 100 , marginTop : -100 }}>Discover The</Text>
-            <Text style={{fontSize:27 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -5 }}>leagues</Text>
-             <View style={{marginTop :10}}>
-             <Image source={require('../assets/imges/Frame1.png')} style={{width : 373 , height : 41 , padding : 8  }}/>
-                <TextInput style={styles.input}/>
-                <TouchableOpacity style={{width :2}}>
-                <Image source={require('../assets/imges/searchBtn.png')} style={{width : 83.828 , height : 55.838 , marginHorizontal : 320 , marginVertical : -10 }}/>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={pressHandler}>
-            <Image source={require('../assets/imges/EnglishPremierLeague.png')} style={{width :125 , height : 125 , marginLeft : 12 , marginTop : 20}}/>
-            <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -110 }}>Premier</Text>
-            <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -20 }}>league</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-            <Image source={require('../assets/imges/spnainleague.png')} style={{width :125 , height : 125 , marginLeft : 16 , marginTop : 20}}/>
-            <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -110 }}>La</Text>
-            <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -20 }}>league</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-            <Image source={require('../assets/imges/Italian-Serie-A-Logo.png')} style={{width :297 , height : 125 , marginLeft : -70 , marginTop : 20}}/>
-            <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -115 }}>Serie A</Text>
-            <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -20 }}>league</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-            <Image source={require('../assets/imges/germanleague.png')} style={{width :265 , height : 170 , marginLeft : -56 , marginTop : 20}}/>
-            <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -135 }}>bundesliga</Text>
-            <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -20 }}>league</Text>
-            </TouchableOpacity>
-            <View style={{height:200}}>
-            <TouchableOpacity>
-            <Image source={require('../assets/imges/egyptian.png')} style={{width :177 , height : 177 , marginLeft : -20 , marginTop : 20}}/>
-            <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -165 }}>Egyptian</Text>
-            <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -20 }}>league</Text>
-            </TouchableOpacity>
-            </View>
-             </View>
-             </ScrollView>
-        
-           
-        )
+import Premierleague from "./Screens/Premierleague/Premierleague";
+import Home from "./Screens/home/home";
+import Spainleague from "./Screens/Spainleague/Spainleague";
+import Italianleague from "./Screens/Italianleague/Italianleague";
+import Germanleague from "./Screens/Germanleague/Germanleague";
+import Egyptianleague from "./Screens/Egyptianleague/Egyptianleague";
+import Arsenal from "./Screens/Premierleague/Arsenal ";
+import Astonvilla from "./Screens/Premierleague/Astonvilla ";
+import Chelsea from "./Screens/Premierleague/Chelsea";
+import Liverpool from "./Screens/Premierleague/liverpool";
+import Manchestercity from "./Screens/Premierleague/Manchestercity ";
+import Manchesterunited from "./Screens/Premierleague/Manchesterunited";
+import Atleticomadrid from "./Screens/Spainleague/Atleticomadrid";
+import Barcelona from "./Screens/Spainleague/Barcelona";
+import RealMadrid from "./Screens/Spainleague/RealMadrid";
+import Inter from "./Screens/Italianleague/Inter";
+import Juventus from "./Screens/Italianleague/Juventus";
+import Milan from "./Screens/Italianleague/Milan";
+import Napoli from "./Screens/Italianleague/Napoli ";
+import Rome from "./Screens/Italianleague/Rome";
+import BayernMunchen from "./Screens/Germanleague/BayernMunchen";
+import Dortmund from "./Screens/Germanleague/Dortmund";
+import Alahly from "./Screens/Egyptianleague/Alahly";
+import Elzamalek from "./Screens/Egyptianleague/Elzamalek";
+import Pyramids from "./Screens/Egyptianleague/Pyramids";
+import UserProfile from "./Screens/UserProfile/UserProfile";
+const Stack = createNativeStackNavigator();
+const App = () => {
+    return(
+        <NavigationContainer independent={true}>
+            <Stack.Navigator screenOptions={{headerShown : false ,}}>
+            <Stack.Screen name="Home" component={Home}  />
+                <Stack.Screen name="Premierleague" component={Premierleague}  />
+                <Stack.Screen name="Spainleague" component={Spainleague}  />
+                <Stack.Screen name="Italianleague" component={Italianleague}  />
+                <Stack.Screen name="Germanleague" component={Germanleague}  />
+                <Stack.Screen name="Egyptianleague" component={Egyptianleague}  />
+                <Stack.Screen name="Arsenal" component={Arsenal}  />
+                <Stack.Screen name="Astonvilla" component={Astonvilla}  />
+                <Stack.Screen name="Chelsea" component={Chelsea}  />
+                <Stack.Screen name="Liverpool" component={Liverpool}  />
+                <Stack.Screen name="Manchestercity" component={Manchestercity}  />
+                <Stack.Screen name="Manchesterunited" component={Manchesterunited}  />
+                <Stack.Screen name="Atleticomadrid" component={Atleticomadrid}  />
+                <Stack.Screen name="Barcelona" component={Barcelona}  />
+                <Stack.Screen name="RealMadrid" component={RealMadrid}  />
+                <Stack.Screen name="Inter" component={Inter}  />
+                <Stack.Screen name="Juventus" component={Juventus}  />
+                <Stack.Screen name="Milan" component={Milan}  />
+                <Stack.Screen name="Napoli" component={Napoli}  />
+                <Stack.Screen name="Rome" component={Rome}  />
+                <Stack.Screen name="BayernMunchen" component={BayernMunchen}  />
+                <Stack.Screen name="Dortmund" component={Dortmund}  />
+                <Stack.Screen name="Alahly" component={Alahly}  />
+                <Stack.Screen name="Elzamalek" component={Elzamalek}  />
+                <Stack.Screen name="Pyramids" component={Pyramids}  />
+                <Stack.Screen name="UserProfile" component={UserProfile}  />
+            </Stack.Navigator>
+        </NavigationContainer>
+    )
 }
-const styles =StyleSheet.create({
-input:{
-  borderWidth : 1,  
-  width : 373 ,
-  height : 40 ,
-  padding : 8 ,
-  gab : 8 ,
-  marginVertical : -40 ,
-  HomeTextSmall:{
-    fontSize : 48 , 
-    fontWeight : "bold" ,
-     color : '#877DFA' ,
-     marginLeft : 140 ,
-      marginTop : -20 ,
-      HomeTextReg :{
-        fontSize:55 , 
-        fontWeight : "bold" , 
-        color : '#877DFA' ,
-         marginLeft : 140 ,
-          marginTop : -110 ,
-          HeaderStyle:{
-            width :69 ,
-             height : 69 , 
-             marginLeft : 100 ,
-              marginTop : -70 ,
-          }
-      }
-  }
-}
-
-})
+export default App ;

@@ -1,9 +1,11 @@
 import React,{useState} from "react";
+import { useNavigation } from "expo-router";
 import { View , Text , Image , TouchableOpacity , Alert , TextInput , StyleSheet , ScrollView} from 'react-native';
 export default  function Premierleague (){
+    const navigation =useNavigation();
     return (
         <ScrollView>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> navigation.navigate('UserProfile')}>
             <Image source={require('../../../assets/imges/messi.png')} style={{width : 77 , height : 51 , marginVertical : 24 , marginHorizontal : 315}}/>
         </TouchableOpacity> 
         <TouchableOpacity>
@@ -15,28 +17,30 @@ export default  function Premierleague (){
             <TouchableOpacity>
             <Image source={require('../../../assets/imges/notfication.png')} style={{width : 44 , height : 30 , marginVertical : -175 , marginHorizontal : 280  }}/>
               </TouchableOpacity>
+              <TouchableOpacity onPress={()=> navigation.navigate('Arsenal')}>
              <Image source={require('../../../assets/imges/Arsenal.png')} style={{width :100 , height : 118 , marginLeft : 30 , marginTop : 20}}/>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -110 }}>Arsenal</Text>
-            <TouchableOpacity>
+                </TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Astonvilla')}>
              <Image source={require('../../../assets/imges/Astonvella.png')} style={{width :93 , height : 130 , marginLeft : 35 , marginTop : 50}}/>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -135 }}>Aston</Text>
              <Text style={{fontSize:48 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -20 }}>villa</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Chelsea')}>
              <Image source={require('../../../assets/imges/Chelsea.png')} style={{width :121 , height : 121 , marginLeft : 20 , marginTop : 30}}/>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -100 }}>Chelsea</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Liverpool')}>
              <Image source={require('../../../assets/imges/liverpool.png')} style={{width :133 , height : 133 , marginLeft : 15 , marginTop : 30}}/>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -100 }}>Liverpool</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Manchestercity')}>
              <Image source={require('../../../assets/imges/manchCitey.png')} style={{width :120 , height : 120 , marginLeft : 20 , marginTop : 55}}/>
              <Text style={{fontSize:45 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -115 }}>Manchester</Text>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -20 }}>city</Text>
             </TouchableOpacity>
             <View style={{height:200}}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Manchesterunited')}>
              <Image source={require('../../../assets/imges/manchUnited.png')} style={{width :148 , height : 148.06 , marginLeft : 5 , marginTop : 20}}/>
              <Text style={{fontSize:45 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -115 }}>Manchester</Text>
              <Text style={{fontSize:55 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 140 , marginTop : -20 }}>united</Text>
