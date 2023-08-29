@@ -11,7 +11,7 @@ export default  function Italianleague (){
           <TouchableOpacity>
             <Image source={require('../../../assets/imges/notfication.png')} style={{width : 44 , height : 30 , marginVertical : -55 , marginHorizontal : 280  }}/>
              </TouchableOpacity>
-             <TouchableOpacity>
+             <TouchableOpacity onPress={()=>navigation.goBack()}>
             <Image source={require('../../../assets/imges/back.png')} style={{width : 108 , height : 72 , marginVertical : -73 , marginHorizontal :-28 }}/>
         </TouchableOpacity>
             <Image source={require('../../../assets/imges/Italian-Serie-A-Logo.png')} style={{width :76 , height : 76 , marginLeft : 100 , marginTop : -70}}/>

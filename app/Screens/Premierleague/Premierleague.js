@@ -8,7 +8,7 @@ export default  function Premierleague (){
         <TouchableOpacity onPress={()=> navigation.navigate('UserProfile')}>
             <Image source={require('../../../assets/imges/messi.png')} style={{width : 77 , height : 51 , marginVertical : 24 , marginHorizontal : 315}}/>
         </TouchableOpacity> 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.goBack()}>
             <Image source={require('../../../assets/imges/back.png')} style={{width : 108 , height : 72 , marginVertical : -90 , marginHorizontal :-28 }}/>
         </TouchableOpacity>
         <Image source={require('../../../assets/imges/EnglishPremierLeague.png')} style={{width :76 , height : 76 , marginLeft : 100 , marginTop : -70}}/>
