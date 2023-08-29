@@ -14,8 +14,8 @@ export default  function Egyptianleague (){
              <TouchableOpacity onPress={()=>navigation.goBack()}>
             <Image source={require('../../../assets/imges/back.png')} style={{width : 108 , height : 72 , marginVertical : -73 , marginHorizontal :-28 }}/>
         </TouchableOpacity>
-        <Image source={require('../../../assets/imges/egyptian.png')} style={{width :69 , height : 69 , marginLeft : 100 , marginTop : -70}}/>
-             <Text style={{fontSize:20 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 170 , marginTop : -60 }}>Egyptian</Text>
+        <Image source={require('../../../assets/imges/egyptian.png')} style={{width :104 , height : 104 , marginLeft : 100 , marginTop : -70 , marginLeft : 50}}/>
+             <Text style={{fontSize:20 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 170 , marginTop : -85 }}>Egyptian</Text>
              <Text style={{fontSize:18 , fontWeight : "bold" , color : '#877DFA' , marginLeft : 170 , marginTop : 0 }}>league</Text>
              <TouchableOpacity onPress={()=> navigation.navigate('Alahly')}>
              <Image source={require('../../../assets/imges/Alahaly.png')} style={{width :95 , height : 146 , marginLeft : 25 , marginTop :50}}/>
